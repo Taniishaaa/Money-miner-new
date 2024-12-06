@@ -1,0 +1,198 @@
+/* General Layout */
+.signup-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Softer angle for gradient */
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.decorative-img-container {
+  margin-top: 2rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.right-panel {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 6rem;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sign-up-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #2575fc;
+  display: inline-block;
+}
+
+/* Input Styling */
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.2);
+}
+
+.sign-up-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff6a00, #ff3f00);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.sign-up-btn:hover {
+  background: linear-gradient(135deg, #ff3f00, #ff1c00);
+  transform: scale(1.02);
+}
+
+/* Social Sign-Up Section */
+.social-sign-up {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: #777;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.twitter-btn {
+  background-color: #1da1f2;
+}
+
+.facebook-btn {
+  background-color: #1877f2;
+}
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    padding: 2rem;
+    height: 40vh;
+  }
+
+  .right-panel {
+    padding: 2rem;
+    height: 60vh;
+  }
+
+  .sign-up-title {
+    font-size: 1.8rem;
+  }
+
+  .input-field {
+    font-size: 0.9rem;
+  }
+
+  .sign-up-btn {
+    font-size: 1rem;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

@@ -1,0 +1,158 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #F4F5F9;
+    color: black;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  }
+  
+  .header__brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__brand img {
+    height: 50px;
+    width: 60px;
+    margin-left: 2rem;
+  }
+  
+  .header__menu {
+    display: flex;
+    gap: 4rem;
+    text-transform: capitalize;
+    margin-left: 4rem;
+  }
+  
+  .header__link {
+    position: relative;
+    color: #070707;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .header__link:hover {
+    color: rgba(147, 121, 24, 0.954);
+  }
+  
+  .header__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+  }
+  
+  .header__link:hover::after {
+    width: 100%;
+  }
+  
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .header__login-btn {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  
+  .header__login-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .header__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .header__hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .header__menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      align-items: center;
+      margin-top: 1rem;
+    }
+  
+    .header__menu.active {
+      display: flex;
+    }
+  
+    .header__actions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .header__login-btn {
+      width: 80%;
+    }
+  
+    .header__hamburger {
+      display: flex;
+    }
+  }
+  
+  .main-container {
+    margin: 0 3rem;
+  }
+  
+  .page-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      margin: 0 1rem;
+    }
+  
+    .page-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,161 @@
+/* Chat Container */
+.chat-container {
+  max-width: 600px;
+  padding-top: 1rem;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background: linear-gradient(to top right, #ffffff, #f4f4f4);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Header */
+.chat-header {
+  background: #007bff;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px solid #0056b3;
+}
+
+/* Chat History */
+.chat-history {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f4f4f4;
+}
+
+/* Custom Scrollbar for Chat History */
+.chat-history::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble.question {
+  background: #007bff;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble.answer {
+  background: #e9ecef;
+  color: #333333;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Typing Indicator */
+.chat-bubble.answer.typing {
+  font-style: italic;
+  color: #888;
+  background: #f1f1f1;
+}
+
+/* Welcome Message */
+.welcome-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666666;
+  margin-top: 20px;
+}
+
+/* Input Form */
+.chat-input-form {
+  display: flex;
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  gap: 10px;
+}
+
+/* Textarea for Input */
+textarea {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Send Button */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+/* Dialogflow Messenger */
+df-messenger {
+  z-index: 999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  --df-messenger-font-color: #000;
+  --df-messenger-font-family: Google Sans;
+  --df-messenger-chat-background: #f3f6fc;
+  --df-messenger-message-user-background: #d3e3fd;
+  --df-messenger-message-bot-background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+df-messenger .df-messenger-chat-wrapper {
+  border-radius: 15px;
+}

@@ -1,0 +1,121 @@
+.tradesphere-body {
+  padding-top: 6rem;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.tradesphere-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tradesphere-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e9b44c;
+  text-transform: uppercase;
+}
+
+.match-container {
+  margin-bottom: 2rem;
+}
+
+.match {
+  background: linear-gradient(145deg, #1f1f2e, #292946);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.match-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #e9b44c;
+}
+
+.match-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444466;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.team-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+.time-remaining {
+  display: block;
+  font-size: 1rem;
+  color: #e57373;
+}
+
+.match-time {
+  font-size: 1rem;
+  color: #a3a3ff;
+}
+
+.team-description, .team-subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.prize-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn button {
+  background: linear-gradient(145deg, #292946, #1f1f2e);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #1f1f2e, #292946);
+  color: #e9b44c;
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
